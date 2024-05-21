@@ -153,4 +153,4 @@ The decision to make the methods `norm`, `init`, and `tr` **static** in the `Str
    - Using static methods provides a convenient way to organize related functionality within a class.
    - It also makes the code more readable and self-contained. When you see `StringMisc.norm(...)`, you immediately know it's a utility function provided by the `StringMisc` class.
 
-Mmaking these methods static allows you to use them directly, emphasizes their utility nature, and avoids unnecessary instance creation. 
+Making these methods static allows you to use them directly, emphasizes their utility nature, and avoids unnecessary instance creation. 
