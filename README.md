@@ -131,3 +131,26 @@ tr(String s, String from, String to):
 * This function replaces characters in the input string s based on the mappings provided by from and to.
 * The characters in from must be different, and from and to should be of the same length.
 * For example, if from is “abc” and to is “XXY”, then ‘a’ and ‘b’ should be replaced by ‘X’, and ‘c’ by ‘Y’.
+
+The decision to make the methods `norm`, `init`, and `tr` **static** in the `StringMisc` class serves a specific purpose. Let's explore why:
+
+1. **Static Methods**:
+   - Static methods belong to the class itself, rather than an instance of the class.
+   - They can be called directly on the class (e.g., `StringMisc.norm("caravaggio")`) without creating an object of the class.
+   - In your case, making these methods static allows you to use them without instantiating a `StringMisc` object.
+
+2. **Utility Functions**:
+   - The methods you've defined (`norm`, `init`, and `tr`) are utility functions that operate on input data (strings) and return modified strings.
+   - Utility functions are often used for common tasks that don't require maintaining state or accessing instance-specific data.
+   - By making them static, you emphasize their purpose as general-purpose utilities rather than methods tied to specific instances.
+
+3. **No Instance State**:
+   - These methods don't rely on any instance-specific data (fields or properties).
+   - They don't need access to instance variables because they work solely with the input parameters (`name`, `s`, `from`, and `to`).
+   - Therefore, making them static simplifies their implementation.
+
+4. **Convenience and Clarity**:
+   - Using static methods provides a convenient way to organize related functionality within a class.
+   - It also makes the code more readable and self-contained. When you see `StringMisc.norm(...)`, you immediately know it's a utility function provided by the `StringMisc` class.
+
+Mmaking these methods static allows you to use them directly, emphasizes their utility nature, and avoids unnecessary instance creation. 
