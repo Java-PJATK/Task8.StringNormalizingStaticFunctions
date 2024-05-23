@@ -3,7 +3,7 @@ public class StringMisc {
         if (name == null || name.isEmpty()) {
             return "";
         }
-        return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
+        return name.trim().substring(0, 1).toUpperCase() + name.trim().substring(1).toLowerCase();
     }
 
     public static String init(String name) {
@@ -33,8 +33,8 @@ public class StringMisc {
     }
 
     public static void main(String[] args) {
-        System.out.println(norm("caravaggio"));
-        System.out.println(norm("VERMEER"));
+        System.out.println(norm("   caravaggio"));
+        System.out.println(norm("   VERMEER     "));
 
         System.out.println(init("johann sebastian bach"));
         System.out.println(init("i. babeL"));
