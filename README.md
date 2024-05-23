@@ -78,7 +78,7 @@ public class StringMisc {
         if (name == null || name.isEmpty()) {
             return "";
         }
-        String[] parts = name.split(" ");
+        String[] parts = name.split("\\s+");
         StringBuilder result = new StringBuilder();
         for (String part : parts) {
             if (!part.isEmpty()) {
