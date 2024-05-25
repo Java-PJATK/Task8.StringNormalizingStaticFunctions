@@ -250,3 +250,5 @@ public static String init(String name) {
 - **Check for `isEmpty()`**: Ensures only non-empty parts are processed, handling multiple spaces effectively.
 
 Using `split("\\s+")` and checking for non-empty parts makes the method more robust and ensures it handles various input cases correctly.
+
+[Contents](https://github.com/Java-PJATK/00.Index/)
